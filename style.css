@@ -73,7 +73,7 @@ z-index:-1;
 
 header{
 
-min-height:100vh;
+min-height:85vh;
 
 display:flex;
 
@@ -101,7 +101,7 @@ animation:float 5s ease-in-out infinite;
 
 .logo img{
 
-width:300px;
+width:380px;
 
 max-width:90%;
 
