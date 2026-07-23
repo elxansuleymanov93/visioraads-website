@@ -73,7 +73,7 @@ z-index:-1;
 
 header{
 
-min-height:85vh;
+min-height:78vh;
 
 display:flex;
 
@@ -85,7 +85,7 @@ flex-direction:column;
 
 text-align:center;
 
-padding:40px 20px;
+padding: 20px 20px 40px;
 
 }
 
@@ -101,9 +101,9 @@ animation:float 5s ease-in-out infinite;
 
 .logo img{
 
-width:380px;
+width:420px;
 
-max-width:90%;
+max-width:92%;
 
 filter:drop-shadow(0 20px 35px rgba(0,0,0,.45));
 
@@ -140,13 +140,11 @@ background:linear-gradient(90deg,#ffffff,#d9d9d9);
 /* Subtitle */
 
 header p{
-
-font-size:22px;
-
-color:#dadada;
-
-margin-bottom:45px;
-
+    font-size:20px;
+    font-weight:500;
+    color:#d8d8d8;
+    margin-top:10px;
+    margin-bottom:35px;
 }
 
 /* Buttons */
@@ -767,4 +765,16 @@ max-width:100%;
 height:auto;
 
 }
+}
+.social{
+    margin-top:-20px;
+}
+.social a:hover{
+    border-color:#ff7b00;
+    box-shadow:0 0 35px rgba(255,123,0,.25);
+}
+.btn{
+    width:300px;
+    height:62px;
+    font-size:20px;
 }
