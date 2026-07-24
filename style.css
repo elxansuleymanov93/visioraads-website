@@ -1,0 +1,509 @@
+/* ====================================
+   VISIORA ADS
+   Premium Website v2
+==================================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#071322;
+color:#fff;
+overflow-x:hidden;
+animation:fadePage .8s ease;
+}
+
+/* Animated Background */
+body::before{
+content:"";
+position:fixed;
+inset:0;
+background:
+radial-gradient(circle at top left,#1d4f8f 0%,transparent 40%),
+radial-gradient(circle at bottom right,#ff7b00 0%,transparent 30%);
+opacity:.25;
+z-index:-2;
+}
+
+body::after{
+content:"";
+position:fixed;
+width:700px;
+height:700px;
+background:#ff7b00;
+filter:blur(180px);
+opacity:.08;
+right:-250px;
+top:-250px;
+z-index:-1;
+}
+
+/* Header */
+header{
+min-height:78vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+text-align:center;
+padding:20px 20px 40px;
+}
+
+/* Logo */
+.logo{
+margin-bottom:35px;
+animation:float 5s ease-in-out infinite;
+}
+
+.logo img{
+width:420px;
+max-width:92%;
+filter:drop-shadow(0 20px 35px rgba(0,0,0,.45));
+transition:.4s;
+user-select:none;
+-webkit-user-drag:none;
+}
+
+.logo img:hover{
+transform:scale(1.05);
+}
+
+/* Title */
+h1{
+font-size:62px;
+font-weight:800;
+letter-spacing:3px;
+margin-bottom:12px;
+background:linear-gradient(90deg,#ffffff,#d9d9d9);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+animation:fadeUp 1s ease;
+}
+
+/* Subtitle */
+header p{
+font-size:20px;
+font-weight:500;
+color:#d8d8d8;
+margin-top:10px;
+margin-bottom:35px;
+animation:fadeUp 1.3s ease;
+}
+
+/* Buttons */
+.buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+animation:fadeUp 1.6s ease;
+}
+
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+width:300px;
+height:62px;
+font-size:20px;
+border-radius:60px;
+background:#ff7b00;
+color:#fff;
+text-decoration:none;
+font-weight:600;
+transition:.35s ease;
+box-shadow:0 15px 30px rgba(255,123,0,.30);
+border: none;
+cursor: pointer;
+}
+
+.btn:hover{
+transform:translateY(-5px);
+background:#ff9200;
+}
+
+.btn:active{
+transform:scale(.96);
+}
+
+.whatsapp{
+background:#25D366;
+box-shadow:0 15px 30px rgba(37,211,102,.35);
+}
+
+.whatsapp:hover{
+background:#20bc59;
+}
+
+/* ==========================
+   SERVICES PREVIEW SECTION
+========================== */
+
+.services-preview{
+width:90%;
+max-width:1000px;
+margin:0 auto 50px;
+text-align:center;
+padding:20px;
+}
+
+.services-preview h2{
+font-size:28px;
+margin-bottom:20px;
+color:#fff;
+letter-spacing:1px;
+}
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:15px;
+}
+
+.services-grid span{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+padding:16px 20px;
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,.08);
+border-radius:15px;
+font-size:15px;
+font-weight:500;
+color:#e2e2e2;
+transition:.35s ease;
+}
+
+.services-grid span:hover{
+border-color:#ff7b00;
+transform:translateY(-4px);
+color:#fff;
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+.services-grid i{
+color:#ff7b00;
+}
+
+/* ==========================
+   SOCIAL SECTION
+========================== */
+
+.social{
+width:90%;
+max-width:1000px;
+margin:0 auto 80px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+padding:20px;
+margin-top:-20px;
+}
+
+.social a{
+display:flex;
+align-items:center;
+gap:18px;
+padding:24px;
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,.08);
+border-radius:20px;
+text-decoration:none;
+color:#fff;
+transition:.35s ease;
+}
+
+.social a:hover{
+transform:translateY(-8px);
+border-color:#ff7b00;
+box-shadow:0 0 35px rgba(255,123,0,.25);
+}
+
+.social i{
+font-size:30px;
+color:#ff7b00;
+min-width:35px;
+}
+
+.social span{
+font-size:17px;
+font-weight:500;
+}
+
+/* ==========================
+   CATALOG
+========================== */
+
+#catalog{
+padding:80px 20px;
+}
+
+.catalog-box{
+max-width:900px;
+margin:auto;
+padding:55px;
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(18px);
+border-radius:25px;
+border:1px solid rgba(255,255,255,.08);
+text-align:center;
+transition:.4s ease;
+}
+
+.catalog-box:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 45px rgba(0,0,0,.30);
+}
+
+.catalog-box h2{
+font-size:42px;
+margin-bottom:15px;
+}
+
+.catalog-box p{
+font-size:18px;
+color:#d8d8d8;
+line-height:1.8;
+margin-bottom:35px;
+}
+
+/* ==========================
+   FLOATING WHATSAPP
+========================== */
+
+.floating-whatsapp{
+position:fixed;
+right:25px;
+bottom:25px;
+width:68px;
+height:68px;
+display:flex;
+justify-content:center;
+align-items:center;
+border-radius:50%;
+background:#25D366;
+color:#fff;
+font-size:32px;
+text-decoration:none;
+box-shadow:0 15px 35px rgba(37,211,102,.45);
+z-index:999;
+transition:.3s ease;
+}
+
+.floating-whatsapp:hover{
+transform:scale(1.12);
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+margin-top:80px;
+padding:35px 20px;
+text-align:center;
+color:#cfcfcf;
+font-size:15px;
+border-top:1px solid rgba(255,255,255,.08);
+background:rgba(255,255,255,.03);
+}
+
+/* ==========================
+   SCROLLBAR
+========================== */
+
+::-webkit-scrollbar{
+width:10px;
+}
+
+::-webkit-scrollbar-track{
+background:#08121d;
+}
+
+::-webkit-scrollbar-thumb{
+background:#ff7b00;
+border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+background:#ff9a1f;
+}
+
+/* ==========================
+   TEXT SELECTION
+========================== */
+
+::selection{
+background:#ff7b00;
+color:#fff;
+}
+
+/* ==========================
+   ANIMATIONS
+========================== */
+
+@keyframes float{
+0%{
+transform:translateY(0px);
+}
+50%{
+transform:translateY(-12px);
+}
+100%{
+transform:translateY(0px);
+}
+}
+
+@keyframes fadeUp{
+0%{
+opacity:0;
+transform:translateY(40px);
+}
+100%{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes fadePage{
+from{
+opacity:0;
+}
+to{
+opacity:1;
+}
+}
+
+/* Glass Effect */
+.glass{
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,.08);
+border-radius:20px;
+}
+
+/* ==========================
+   RESPONSIVE DESIGN
+========================== */
+
+@media (max-width:992px){
+h1{
+font-size:50px;
+}
+
+header p{
+font-size:20px;
+}
+
+.logo img{
+width:240px;
+}
+
+.catalog-box{
+padding:40px;
+}
+}
+
+/* Tablet */
+@media (max-width:768px){
+header{
+padding:60px 20px;
+}
+
+h1{
+font-size:38px;
+letter-spacing:1px;
+}
+
+header p{
+font-size:18px;
+margin-bottom:35px;
+}
+
+.buttons{
+flex-direction:column;
+align-items:center;
+width:100%;
+}
+
+.btn{
+width:100%;
+max-width:320px;
+justify-content:center;
+}
+
+.social{
+grid-template-columns:1fr;
+padding:15px;
+margin-top:-20px;
+}
+
+.catalog-box{
+padding:30px;
+}
+
+.catalog-box h2{
+font-size:32px;
+}
+
+.catalog-box p{
+font-size:16px;
+}
+
+.floating-whatsapp{
+width:60px;
+height:60px;
+font-size:28px;
+right:18px;
+bottom:18px;
+}
+}
+
+/* Mobile */
+@media (max-width:480px){
+.logo img{
+width:190px;
+}
+
+h1{
+font-size:30px;
+}
+
+header p{
+font-size:16px;
+}
+
+.social a{
+padding:18px;
+}
+
+.social i{
+font-size:26px;
+}
+
+.social span{
+font-size:15px;
+}
+
+footer{
+font-size:13px;
+padding:25px 15px;
+}
+}
+
+img{
+max-width:100%;
+height:auto;
+}
