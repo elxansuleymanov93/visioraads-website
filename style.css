@@ -631,6 +631,8 @@ justify-content:center;
 grid-template-columns:1fr;
 
 padding:15px;
+   
+   mergin-top:-20px;
 
 }
 
